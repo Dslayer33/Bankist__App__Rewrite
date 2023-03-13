@@ -1,0 +1,14 @@
+{
+  "name": "cleaning",
+  "version": "1.0.0",
+  "description": "Cleaning X(template)",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass scss/Cleaning-X(main).scss css/Cleaning-X(main).css -w"
+  },
+  "author": "Dslayer33",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.13.1"
+  }
+}

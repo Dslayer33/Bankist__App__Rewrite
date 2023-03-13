@@ -1,0 +1,491 @@
+@mixin break-point2  {
+    @media screen and (max-width:1200px) { @content};
+}
+
+@mixin break-point3  {
+    @media screen and (max-width:900px) { @content };
+}
+
+@mixin break-point4  {
+    @media screen and (max-width:550px) { @content };
+}
+
+@mixin break-point5  {
+    @media screen and (max-width:500px) { @content };
+}
+
+@mixin break-point6  {
+    @media screen and (max-width:450px) { @content };
+}
+
+@mixin break-point7  {
+    @media screen and (max-width:400px) { @content };
+}
+
+@mixin break-point8  {
+    @media screen and (max-width:300px) { @content };
+}
+
+
+.header {
+    width: 100%;
+    overflow-x: hidden;
+
+    &__container {
+        width: 100%;
+        height: 100%;
+        position: relative;
+       
+
+
+
+        .header-nav {
+            width: 100%;
+            height: 11.8rem;
+            position: relative;
+           
+
+
+            .nav-box {
+                position: absolute;
+                width: 122rem;
+                height: 6rem;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%,-50%);
+                display: flex;
+                justify-content: space-between;
+                
+               
+
+               
+                
+
+
+                .nav-content {
+                    display: flex;
+
+                    .nav-icon {
+                        width: 17.8rem;
+                        height: 4.2rem;
+                        align-self: center;
+                    }
+
+                    .nav-icon.nav-icon {
+                        @include break-point3 {
+                            display: none;
+                        }
+                    }
+
+                    .nav-icon--clone {
+                        width: 17.8rem;
+                        height: 4.2rem;
+                        align-self: center;
+                        display: none;
+                    }
+
+                    .nav-icon--clone.nav-icon--clone.nav-icon--clone  {
+                        @include break-point7 {
+                           margin: 0 auto;
+                        }
+                    }
+
+                    .nav-icon--clone.nav-icon--clone {
+                        @include break-point3 {
+                            display: block;
+                            cursor: pointer;
+                        }
+                    }
+
+
+                    .nav-link {
+                        font-family: $main-font;
+                        font-size: 1.8rem;
+                        font-weight: 400;
+                        line-height: 3rem;
+                        color: $color-basic1;
+                        text-decoration: none;
+                        align-self: center;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+
+                    .nav-link.nav-link {
+                        @include break-point3 {
+                           display: none;
+                        }
+                    }
+
+
+                    .link-margin1 {
+                        margin-left: 4.158rem;
+                    }
+
+                    .link-margin2 {
+                        margin-left: $margin-small;
+                    }
+
+                    .link-margin3 {
+                        margin-left: 4.7rem;
+                    }
+
+
+
+                    .nav-cart {
+                        font-family: $main-font;
+                        font-size: 1.8rem;
+                        font-weight: 400;
+                        line-height: 3rem;
+                        color: $color-basic1;
+                        font-style: normal;
+                        align-self: center;
+                    }
+
+                    .nav-cart.nav-cart {
+                        @include break-point5 {
+                            display: none;
+                        }
+                    }
+
+
+                    .nav-btn {
+                        width: 17.4rem;
+                        height: 5.4rem;
+                        background-color: $main-color;
+                        border-radius: 1.4rem;
+                        border: none;
+                        margin-left: 2.4rem;
+                        transition: all .2s;
+
+
+                        &:hover {
+                            cursor: pointer;
+                            margin-top: 0.5rem;
+                            box-shadow: 1rem 0.2rem 1rem $main-color;
+                        }
+
+                        &:active {
+                            transform: scale(0.9);
+                        }
+                       
+
+                        .nav-btn-text {
+                            font-family: $main-font;
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 1.6rem;
+                            line-height: 1.8rem;
+                            color: $color-basic3;
+                        }
+                    }
+
+                    .nav-btn.nav-btn {
+                        @include break-point7 {
+                            display: none;
+                        }
+                    }
+
+                }
+
+                .nav-content.nav-content.nav-content.nav-content {
+                    @include break-point7 {
+                      width: 100%;
+                    }
+                }
+
+                .nav-content.nav-content.nav-content {
+                    @include break-point6 {
+                        padding-left: 0;
+                        padding-right: 0;
+                    }
+                }
+
+                .nav-content.nav-content {
+                    @include break-point2 {
+                        padding-left: 2rem;
+                        padding-right: 2rem;
+                    }
+                }
+
+                .del-content.del-content {
+                    @include break-point7 {
+                        display: none;
+                    }
+                }
+            }
+
+            .nav-box.nav-box.nav-box.nav-box {
+                @include break-point7 {
+                   justify-content: normal;
+                }                
+            }
+
+            .nav-box.nav-box.nav-box {
+                @include break-point6 {
+                   justify-content: space-evenly;
+                }                
+            }
+
+            .nav-box.nav-box {
+                @include break-point2 {
+                   width: 100%;
+                }                
+            }
+        }
+
+
+        .header-main-box {
+            width: 100%;
+            display: flex;
+            position: relative;
+
+            .header-main-img {
+                display: none;
+            }
+
+            .header-main-img.header-main-img {
+                @include break-point2 {
+                  display: block;
+                  height: 100%;
+                  width: 100%;
+                  filter: opacity(0.8);
+                  position: absolute;
+                  z-index: -1;
+                }
+            }
+
+            .main-inf {
+                display: flex;
+                flex-direction: column;
+                order: 1;
+                margin-top: 22.7rem;
+                margin-left: 11rem;
+
+                
+
+                .inf-title {
+                    font-family: $main-font;
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 6.8rem;
+                    line-height: 7.4rem;
+                    color: $color-basic1;
+                    white-space: pre-line;
+                }
+
+                .inf-title.inf-title.inf-title {
+                    @include break-point7 {
+                        font-size: 4rem;
+                        line-height: 5rem;
+                    }
+                }
+
+                .inf-title.inf-title {
+                    @include break-point4 {
+                        font-size: 5rem;
+                    }
+                }
+
+
+                .inf-paragraph {
+                    font-family: $main-font;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 2.1rem;
+                    line-height: 3rem;
+                    color: $color-basic2;
+                    margin-top: $margin-small;
+                    white-space: pre-line;
+                }
+
+                .inf-paragraph.inf-paragraph.inf-paragraph {
+                    @include break-point7 {
+                        font-size: 1.7rem;
+                    }
+                }
+
+                .inf-paragraph.inf-paragraph {
+                    @include break-point4 {
+                        font-size: 1.8rem;
+                    }
+                }
+
+
+                .inf-contact {
+                    display: flex;
+                    margin-top: 3.4rem;
+                   
+
+
+                    .inf-btn {
+                        width: 21.7rem;
+                        height: 7.2rem;
+                        border-radius: 1.4rem;
+                        border: none;
+                        background-color: $main-color;
+                        transition: all .3s;
+
+                        &:hover {
+                            cursor: pointer;
+                            transform: scale(1.1);
+                            box-shadow: 1rem 0.2rem 1rem $main-color;
+                        }
+
+                        &:active {
+                            transform: scale(0.9);
+                        }
+
+
+                        .inf-btn-text {
+                            font-family: $main-font;
+                            font-style: normal;
+                            font-weight: 700;
+                            font-size: 1.8rem;
+                            line-height: 2rem;
+                            color: $color-basic3;
+                        }
+                    }
+
+
+                    .call-block {
+                        display: flex;
+                        margin-left: 2.85rem;
+                       
+
+
+                        .call-icon-box {
+                            width: 7.1rem;
+                            height: 7.1rem;
+                            border: 1px solid #DCDDEB;
+                            border-radius: 50%;
+                            padding: 1.812rem;
+                            display: flex;
+                        }
+
+                        .call-icon-box.call-icon-box {
+                            @include break-point8 {
+                               display: none;
+                            }
+                        }
+
+                        .call-icon {
+                            width: 3.476rem;
+                            height: 3.477rem;
+                            align-self: center;
+                            justify-self: center;
+                        }
+
+
+                        .call-text {
+                            display: flex;
+                            flex-direction: column;
+                            margin-left: 1.65rem;
+                            align-self: center;
+                            justify-self: center;
+
+
+                            .call-offer {
+                                font-family: $main-font;
+                                font-style: normal;
+                                font-weight: 400;
+                                font-size: 1.6rem;
+                                line-height: 1.8rem;
+                                letter-spacing: 0.16rem;
+                                text-transform: uppercase;
+                                color: $color-basic2;
+                            }
+
+
+                            .call-numbers {
+                                font-family: $main-font;
+                                font-style: normal;
+                                font-weight: 700;
+                                font-size: 2.5rem;
+                                line-height: 3.6rem;
+                                color: $color-basic1;
+                                margin-top: 0.4rem;
+                                white-space: nowrap;
+                            }
+                        }
+
+                    
+                    }
+
+                    .call-block.call-block.call-block {
+                        @include break-point8 {
+                           justify-self: center;
+                        }
+                    }
+
+                    .call-block.call-block {
+                        @include break-point4 {
+                            margin-left: 0;
+                            margin-top: 3rem;
+                        }
+                    }
+                }
+
+                .inf-contact.inf-contact {
+                    @include break-point4 {
+                        flex-direction: column;
+                        justify-items: center;
+                        align-items: center;
+                    }
+                }
+
+
+            }
+
+            .main-inf.main-inf.main-inf {
+                @include break-point4 {
+                    text-align: center;
+                    width: 100%;
+                }
+            }
+
+           
+
+            .main-inf.main-inf {
+                @include break-point3 {
+                   position: absolute;
+                   left: 50%;
+                   top: 50%;
+                   transform: translate(-50%,-50%);
+                   margin-top: 0;
+                   margin-left: 0;
+                }
+            }
+
+            .main-img {
+                width: 72rem;
+                height: 73.4rem;
+                order: 2;
+               
+               
+                
+                .clean-img-item {
+                    object-fit: cover;
+                }
+
+                
+                
+
+            }
+
+            .main-img.main-img {
+                @include break-point2 {
+                    display: none;
+                }
+            }
+        }
+
+        .header-main-box.header-main-box {
+            @include break-point2 {
+                height: 73.4rem;
+            }
+        }
+    }
+}
+
